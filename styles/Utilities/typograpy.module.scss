@@ -1,0 +1,340 @@
+// .displayRegular
+@font-face {
+  font-family: "display-Regular";
+  src: url(/fonts/CircularStd/CircularStd-Book.otf);
+}
+// .displayMedium
+@font-face {
+  font-family: "display-Medium";
+  src: url(/fonts/CircularStd/CircularStd-Medium.otf);
+}
+// .displayBold
+@font-face {
+  font-family: "display-Bold";
+  src: url(/fonts/CircularStd/CircularStd-Bold.otf);
+}
+// .displayBlack
+@font-face {
+  font-family: "display-Black";
+  src: url(/fonts/CircularStd/CircularStd-Black.otf);
+}
+
+.display_regular {
+  font-family: display-Regular;
+  font-weight: 400;
+  line-height: 72px;
+  font-size: 60px;
+}
+
+.display_medium {
+  font-family: display-Medium;
+  font-weight: 400;
+  line-height: 72px;
+  font-size: 60px;
+}
+
+.display_bold {
+  font-family: display-Bold;
+  font-weight: 700;
+  line-height: 72px;
+  font-size: 60px;
+}
+
+.display_black {
+  font-family: display-Black;
+  font-weight: 900;
+  line-height: 72px;
+  font-size: 60px;
+}
+
+// h1 Regular
+@font-face {
+  font-family: "h1-Regular";
+  src: url(/fonts/CircularStd/CircularStd-Book.otf);
+  font-weight: 400;
+  line-height: 60px;
+  font-size: 48px;
+}
+// h1 Medium
+@font-face {
+  font-family: "h1-Medium";
+  src: url(/fonts/CircularStd/CircularStd-Medium.otf);
+  font-weight: 400;
+  line-height: 60px;
+  font-size: 48px;
+}
+// h1 Bold
+@font-face {
+  font-family: "h1-Bold";
+  src: url(/fonts/CircularStd/CircularStd-Bold.otf);
+  font-weight: 700;
+  line-height: 60px;
+  font-size: 48px;
+}
+// h1 Black
+@font-face {
+  font-family: "h1-Black";
+  src: url(/fonts/CircularStd/CircularStd-Black.otf);
+  font-weight: 900;
+  line-height: 60px;
+  font-size: 48px;
+}
+
+.h1_regular {
+  font-family: h1-Regular;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 60px;
+}
+
+.h1_medium {
+  font-family: h1-Medium;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 60px;
+}
+
+.h1_bold {
+  font-family: h1-Bold;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+}
+
+.h1_black {
+  font-family: h1-Black;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 60px;
+}
+
+// Display md regular
+@font-face {
+  font-family: "Display-md-regular";
+  src: url(/fonts/CircularStd/CircularStd-Book.otf);
+}
+
+// Display md medium
+@font-face {
+  font-family: "Display-md-medium";
+  src: url(/fonts/CircularStd/CircularStd-Book.otf);
+}
+
+// Display md bold
+@font-face {
+  font-family: "Display-md-bold";
+  src: url(/fonts/CircularStd/CircularStd-Bold.otf);
+}
+
+// Display md black
+@font-face {
+  font-family: "Display-md-black";
+  src: url(/fonts/CircularStd/CircularStd-Blackotf);
+}
+
+.h2_regular {
+  font-family: Display-md-regular;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 44px;
+}
+.h2_medium {
+  font-family: Display-md-regular;
+  font-weight: 400;
+  line-height: 44px;
+  font-size: 36px;
+}
+.h2_bold {
+  font-family: Display-md-regular;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+}
+.h2_black {
+  font-family: Display-md-regular;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 44px;
+}
+
+// Display sm regular
+.h3_regular {
+  font-family: Display-md-regular;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 38px;
+}
+.h3_medium {
+  font-family: Display-md-regular;
+  font-weight: 400;
+  line-height: 38px;
+  font-size: 30px;
+}
+.h3_bold {
+  font-family: Display-md-regular;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 38px;
+}
+.h3_black {
+  font-family: Display-md-regular;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 38px;
+}
+
+// Display xs
+.h4_regular {
+  font-family: Display-md-regular;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+}
+.h4_medium {
+  font-family: Display-md-regular;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+}
+.h4_bold {
+  font-family: Display-md-regular;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+}
+.h4_black {
+  font-family: Display-md-regular;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+// Text xl
+.xlbody_regular {
+  font-family: Display-md-regular;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+}
+.xlbody_medium {
+  font-family: Display-md-regular;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+}
+.xlbody_bold {
+  font-family: Display-md-regular;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+}
+.xlbody_black {
+  font-family: Display-md-regular;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+// Text lg
+.lgbody_regular {
+  font-family: Display-md-regular;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+}
+.lgbody_medium {
+  font-family: Display-md-regular;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+}
+.lgbody_bold {
+  font-family: Display-md-regular;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+}
+.lgbody_black {
+  font-family: Display-md-regular;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+// Body
+.body_regular {
+  font-family: Display-md-regular;
+  font-weight: 100;
+  font-size: 16px;
+  line-height: 24px;
+}
+.body_medium {
+  font-family: Display-md-regular;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+.body_bold {
+  font-family: Display-md-regular;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+.body_black {
+  font-family: Display-md-regular;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+// body sm
+.body_sm_regular {
+  font-family: Display-md-regular;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+.body_sm_medium {
+  font-family: Display-md-regular;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+.body_sm_bold {
+  font-family: Display-md-regular;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+}
+.body_sm_black {
+  font-family: Display-md-regular;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+// body xs
+.body_xs_regular {
+  font-family: Display-md-regular;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+.body_xs_medium {
+  font-family: Display-md-regular;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+.body_xs_bold {
+  font-family: Display-md-regular;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+}
+.body_xs_black {
+  font-family: Display-md-regular;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+}
