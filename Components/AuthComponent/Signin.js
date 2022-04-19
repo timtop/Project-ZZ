@@ -12,11 +12,41 @@ function Signin({ changeSignIn }) {
   const [text, setText] = useState("");
   const [passwordText, setPasswordText] = useState("");
 
-  console.log(text);
-  console.log(passwordText);
+  console.log(`email ${text}`);
+  console.log(`password ${passwordText}`);
 
   const togglePasswordVisiblity = () => {
     setPasswordShown(passwordShown ? false : true);
+  };
+
+  const handleTextChanges = (e) => {
+    if (text !== "" && passwordText !== "") {
+      setBtnDisabled(false);
+    } else {
+      setBtnDisabled(true);
+    }
+
+    setText(e.target.value);
+  };
+
+  const handlePasswordChanges = (e) => {
+    if (text !== "" && passwordText !== "") {
+      setBtnDisabled(false);
+    } else {
+      setBtnDisabled(true);
+    }
+
+    setPasswordText(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const loginDetails = {
+      text,
+      passwordText,
+    };
+    console.log(loginDetails);
   };
 
   return (
@@ -39,7 +69,7 @@ function Signin({ changeSignIn }) {
         </div>
 
         {/* The form starts here */}
-        <form className={`${styles.signInForm} `}>
+        <form onSubmit={handleSubmit} className={`${styles.signInForm} `}>
           <label htmlFor="email">
             <input
               id="email"
@@ -47,7 +77,7 @@ function Signin({ changeSignIn }) {
               placeholder="Enter your email address"
               className={`${styles.body_regular}`}
               style={{ color: "#98A2B3" }}
-              onChange={(e) => setText(e.target.value)}
+              onChange={handleTextChanges}
               value={text}
             />
           </label>
@@ -62,7 +92,7 @@ function Signin({ changeSignIn }) {
               placeholder="Enter your password"
               className={`${styles.body_regular}`}
               style={{ color: "#98A2B3" }}
-              onChange={(e) => setPasswordText(e.target.value)}
+              onChange={handlePasswordChanges}
             />
             <span
               className={`${styles.pass_eye}`}
@@ -76,15 +106,15 @@ function Signin({ changeSignIn }) {
               />
             </span>
           </label>
+
+          <p>
+            Forgot password? <span className={styles.undbtn}>Click here</span>
+          </p>
+
+          <Button type="submit" isDisabled={btnDisabled}>
+            Login
+          </Button>
         </form>
-
-        <p>
-          Forgot password? <span className={styles.undbtn}>Click here</span>
-        </p>
-
-        <Button type="submit" isDisabled={btnDisabled}>
-          Login
-        </Button>
 
         <p>
           Are you a new member?{" "}

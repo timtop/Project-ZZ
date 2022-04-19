@@ -115,15 +115,15 @@ function Signup({ changeSignIn }) {
               />
             </span>
           </label>
+
+          <p>
+            Forgot password? <span className={styles.undbtn}>Click here</span>
+          </p>
+
+          <Button type="submit" isDisabled={btnDisabled}>
+            Sign up
+          </Button>
         </form>
-
-        <p>
-          Forgot password? <span className={styles.undbtn}>Click here</span>
-        </p>
-
-        <Button type="submit" isDisabled={btnDisabled}>
-          Sign up
-        </Button>
 
         <p>
           Already a member?{" "}
