@@ -3,6 +3,7 @@ import styles from "./signin.module.scss";
 import Layout from "../Layout/layout";
 import Image from "next/image";
 import Button from "../Button/Button";
+import Link from "next/link";
 
 function Signin({ changeSignIn }) {
   const [passwordShown, setPasswordShown] = useState(false);
@@ -11,9 +12,6 @@ function Signin({ changeSignIn }) {
   // Collecting the text
   const [text, setText] = useState("");
   const [passwordText, setPasswordText] = useState("");
-
-  console.log(`email ${text}`);
-  console.log(`password ${passwordText}`);
 
   const togglePasswordVisiblity = () => {
     setPasswordShown(passwordShown ? false : true);
@@ -112,7 +110,9 @@ function Signin({ changeSignIn }) {
           </p>
 
           <Button type="submit" isDisabled={btnDisabled}>
-            Login
+            <Link href="/Event" passHref>
+              Login
+            </Link>
           </Button>
         </form>
 

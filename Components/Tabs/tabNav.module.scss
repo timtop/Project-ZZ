@@ -1,0 +1,20 @@
+@import "../../styles/Utilities/allstyles.module.scss";
+
+.nav_bottom {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  & li {
+    list-style: none;
+  }
+}
+
+.tabactive {
+  color: $gray-900;
+  border-bottom: 4px solid $gray-900;
+  border-radius: 4px;
+}
+
+.tabunactive {
+  color: #98a2b3;
+}
