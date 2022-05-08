@@ -59,7 +59,7 @@ function AdminSignin() {
         >
           <div className={adminstyles.slider_parent}>
             <Image
-              src="/slider.png"
+              src="/Slider.png"
               alt="project logo"
               layout="fill"
               objectFit="cover"
@@ -85,7 +85,7 @@ function AdminSignin() {
 
           <div className={adminstyles.slider_parent}>
             <Image
-              src="/slider-2.png"
+              src="/Slider-2.png"
               alt="project logo"
               layout="fill"
               objectFit="cover"
@@ -111,7 +111,7 @@ function AdminSignin() {
 
           <div className={adminstyles.slider_parent}>
             <Image
-              src="/slider-3.png"
+              src="/Slider-3.png"
               alt="project logo"
               layout="fill"
               objectFit="cover"
