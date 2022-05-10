@@ -7,7 +7,7 @@ import Button from "../../Components/Button/Button";
 import Link from "next/link";
 
 function CreateEvent() {
-  const [eventImage, setEventImage] = useState("No file uploaded yet");
+  const [eventImage, setEventImage] = useState("Click here to upload a file");
   const [btnDisabled, setBtnDisabled] = useState(true);
 
   const [eventName, setEventName] = useState("");
@@ -75,7 +75,7 @@ function CreateEvent() {
 
   return (
     <Layout>
-      <Link href="/admin/AdminEvent">
+      <Link href="/admin/AdminEvent" passHref>
         <span className={styles.close}>
           <Image src="/close.svg" alt="close" width={40} height={40} />
         </span>

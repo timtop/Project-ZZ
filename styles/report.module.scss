@@ -26,33 +26,6 @@
   }
 }
 
-.addbtn {
-  position: fixed;
-
-  left: 75%;
-  top: 89%;
-}
-
-.card {
-  padding: 15px 21px;
-  background-color: white;
-  border-radius: 4px;
-  box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.1),
-    0px 2px 4px -2px rgba(16, 24, 40, 0.06);
-
-  margin-bottom: 24px;
-}
-
-// .clearfix::after {
-//   content: "";
-//   clear: both;
-//   display: table;
-// }
-
-.wrappercard {
-  margin-top: 150px;
-}
-
 .sidenav {
   height: 100%;
   width: 0;
@@ -85,4 +58,15 @@
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+}
+
+.wrapped {
+  margin-top: 120px;
+}
+
+.card {
+  background-color: white;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 4px;
+  padding: 15px 21px;
 }

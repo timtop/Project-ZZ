@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 // import AdminNav from "../../Components/AdminNav/AdminNav";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,20 +10,45 @@ import TabContent from "../../Components/Tabs/TabContent";
 
 function AdminEvent() {
   const [activeTab, setActiveTab] = useState("tab1");
+  const navRef = useRef();
+
+  const openNav = () => {
+    console.log("Nav open");
+    navRef.current.style.width = "250px";
+  };
+
+  const closeNav = () => {
+    console.log("Nav closed");
+    navRef.current.style.width = "0";
+  };
 
   return (
     <div>
       {/* Navigation */}
       <div className={`${styles.nav}`}>
+        {/* Sidenav items begins*/}
+        <div id="mySidenav" ref={navRef} className={styles.sidenav}>
+          <a className={styles.closebtn} onClick={closeNav}>
+            &times;
+          </a>
+          <Link href="/admin/AdminEvent">Events</Link>
+          <Link href="/admin/Reports">Report</Link>
+          <Link href="#">Settings</Link>
+        </div>
+        {/* Sidenav items ends*/}
+
         <Layout>
           {/* Hamburger and text */}
           <div className={styles.nav_top}>
-            <Image
-              src="/hamburger.svg"
-              alt="toggle show password"
-              width={24}
-              height={24}
-            />
+            <div onClick={openNav}>
+              <Image
+                src="/hamburger.svg"
+                alt="toggle show password"
+                width={24}
+                height={24}
+              />
+            </div>
+
             <p
               className={`${styles.nav_top_event} ${styles.h3_black}`}
               style={{ color: "#344054" }}
@@ -316,7 +341,7 @@ function AdminEvent() {
       </div>
 
       {/* Add a new item */}
-      <Link href="/admin/CreateEvent">
+      <Link href="/admin/CreateEvent" passHref>
         <div className={styles.addbtn}>
           <Image src="/Cross.svg" alt="Add new event" width={80} height={80} />
         </div>
