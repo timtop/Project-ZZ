@@ -1,8 +1,10 @@
+/* eslint-disable @next/next/link-passhref */
 import React, { useState } from "react";
 import styles from "./signin.module.scss";
 import Layout from "../Layout/layout";
 import Image from "next/image";
 import Button from "../Button/Button";
+import Link from "next/link";
 
 function Signin({ changeSignIn }) {
   const [passwordShown, setPasswordShown] = useState(false);
@@ -105,7 +107,10 @@ function Signin({ changeSignIn }) {
           </label>
 
           <p>
-            Forgot password? <span className={styles.undbtn}>Click here</span>
+            Forgot password?
+            <Link href="/Authmode/ResetPassword">
+              <span className={styles.undbtn}> Click here</span>
+            </Link>
           </p>
 
           <Button type="submit" isDisabled={btnDisabled}>
