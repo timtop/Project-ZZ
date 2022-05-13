@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Signin from "../Components/AuthComponent/Signin";
-import Signup from "../Components/AuthComponent/Signup";
+import Signin from "../../Components/AuthComponent/Signin";
+import Signup from "../../Components/AuthComponent/Signup";
 
 function Authmode() {
   const [authMode, setAuthMode] = useState("signin");
