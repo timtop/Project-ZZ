@@ -77,7 +77,7 @@ function AdminSignin() {
               {" "}
               <p className={styles.h3_medium}>To Connect</p>
               <p className={styles.body_regular}>
-                Creating an avenue for the body of christ to connect from any
+                Creating an avenue for the body of Christ to connect from any
                 location in the world.
               </p>
             </div>
@@ -103,8 +103,8 @@ function AdminSignin() {
               {" "}
               <p className={styles.h3_medium}>To Build</p>
               <p className={styles.body_regular}>
-                Building a supernatural army with the knowledge of the word and
-                the spirit
+                Building a supernatural army with the knowledge of the Word and
+                the Spirit
               </p>
             </div>
           </div>
@@ -130,7 +130,7 @@ function AdminSignin() {
               <p className={styles.h3_medium}>To Worship</p>
               <p className={styles.body_regular}>
                 A channel for the body of Christ to worship and marvel in the
-                presence on the Creator
+                presence of the Creator
               </p>
             </div>
           </div>
@@ -163,7 +163,7 @@ function AdminSignin() {
                 type="text"
                 placeholder="Enter your email address"
                 className={`${styles.body_regular}`}
-                style={{ color: "#98A2B3" }}
+                style={{ color: "#344054" }}
                 onChange={handleTextChanges}
                 value={text}
               />
@@ -178,7 +178,7 @@ function AdminSignin() {
                 type={passwordShown ? "text" : "password"}
                 placeholder="Enter your password"
                 className={`${styles.body_regular}`}
-                style={{ color: "#98A2B3" }}
+                style={{ color: "#344054" }}
                 onChange={handlePasswordChanges}
               />
               <span

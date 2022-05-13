@@ -73,7 +73,7 @@ function Signin({ changeSignIn }) {
               type="text"
               placeholder="Enter your email address"
               className={`${styles.body_regular}`}
-              style={{ color: "#98A2B3" }}
+              style={{ color: "#344054" }}
               onChange={handleTextChanges}
               value={text}
             />
@@ -88,7 +88,7 @@ function Signin({ changeSignIn }) {
               type={passwordShown ? "text" : "password"}
               placeholder="Enter your password"
               className={`${styles.body_regular}`}
-              style={{ color: "#98A2B3" }}
+              style={{ color: "#344054" }}
               onChange={handlePasswordChanges}
             />
             <span

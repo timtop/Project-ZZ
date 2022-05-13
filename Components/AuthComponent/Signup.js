@@ -41,7 +41,7 @@ function Signup({ changeSignIn }) {
               type="text"
               placeholder="Enter your first name"
               className={`${styles.body_regular}`}
-              style={{ color: "#98A2B3" }}
+              style={{ color: "#344054" }}
             />
           </label>
 
@@ -54,7 +54,7 @@ function Signup({ changeSignIn }) {
               type="text"
               placeholder="Enter your last name"
               className={`${styles.body_regular}`}
-              style={{ color: "#98A2B3" }}
+              style={{ color: "#344054" }}
             />
           </label>
 
@@ -67,7 +67,7 @@ function Signup({ changeSignIn }) {
               type="email"
               placeholder="Enter your email address"
               className={`${styles.body_regular}`}
-              style={{ color: "#98A2B3" }}
+              style={{ color: "#344054" }}
             />
           </label>
 
@@ -101,7 +101,7 @@ function Signup({ changeSignIn }) {
               type={passwordShown ? "text" : "password"}
               placeholder="Create a password"
               className={`${styles.body_regular}`}
-              style={{ color: "#98A2B3" }}
+              style={{ color: "#344054" }}
             />
             <span
               className={`${styles.pass_eye}`}

@@ -81,7 +81,7 @@ function CreateEvent() {
         </span>
       </Link>
 
-      <div className={styles.event}>
+      <div className={styles.eyvent}>
         <div style={styles.event_new}>
           <p
             className={styles.h2_bold}
@@ -121,7 +121,7 @@ function CreateEvent() {
               type="text"
               placeholder="Enter name of event"
               className={`${styles.body_regular}`}
-              style={{ color: "#98A2B3" }}
+              style={{ color: "#344054" }}
               onChange={handleEventInput}
               value={eventName}
             />
@@ -137,7 +137,7 @@ function CreateEvent() {
               type="text"
               placeholder="Enter name of event minister"
               className={`${styles.body_regular}`}
-              style={{ color: "#98A2B3" }}
+              style={{ color: "#344054" }}
               onChange={handleMinisterInput}
               value={minister}
             />
@@ -153,7 +153,7 @@ function CreateEvent() {
               type="date"
               placeholder="Pick event date"
               className={`${styles.body_regular}`}
-              style={{ color: "#98A2B3" }}
+              style={{ color: "#344054" }}
               onChange={handleDateInput}
               value={date}
             />
@@ -169,7 +169,7 @@ function CreateEvent() {
               type="time"
               placeholder="04:00 AM"
               className={`${styles.body_regular}`}
-              style={{ color: "#98A2B3" }}
+              style={{ color: "#344054" }}
               onChange={handleTimeInput}
               value={time}
             />
@@ -189,7 +189,7 @@ function CreateEvent() {
               type="text"
               placeholder="Enter YouTube event link"
               className={`${styles.body_regular}`}
-              style={{ color: "#98A2B3" }}
+              style={{ color: "#344054" }}
               onChange={(e) => setYouTube(e.target.value)}
               value={youTube}
             />
@@ -204,7 +204,7 @@ function CreateEvent() {
               type="text"
               placeholder="Enter Instagram event link"
               className={`${styles.body_regular}`}
-              style={{ color: "#98A2B3" }}
+              style={{ color: "#344054" }}
               onChange={(e) => setIg(e.target.value)}
               value={Ig}
             />
@@ -219,7 +219,7 @@ function CreateEvent() {
               type="text"
               placeholder="Enter Mixlr event link"
               className={`${styles.body_regular}`}
-              style={{ color: "#98A2B3" }}
+              style={{ color: "#344054" }}
               onChange={(e) => setMixlr(e.target.value)}
               value={mixlr}
             />
