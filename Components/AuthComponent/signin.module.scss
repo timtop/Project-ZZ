@@ -15,6 +15,15 @@
   .mobile {
     display: block;
   }
+  
+  .center{
+    text-align: center;
+    padding: 2rem;
+
+    & button{
+      width: 200px;
+    }
+  }
 
   .signInForm {
     width: 100%;
