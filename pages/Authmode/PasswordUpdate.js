@@ -5,10 +5,12 @@ import Image from "next/image";
 import checked from "../../public/checked.png";
 import Button from "../../Components/Button/Button";
 import Link from "next/link";
+import BackRouter from "../../Components/BackRouter/BackRouter";
 
 const PasswordUpdate = () => {
    return (
       <Layout>
+         <BackRouter route={"/Authmode"} />
          <div className={styles.desktop}>
             Please visit this page on a mobile device
          </div>

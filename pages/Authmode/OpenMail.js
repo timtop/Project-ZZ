@@ -3,10 +3,12 @@ import Layout from "../../Components/Layout/layout";
 import Image from "next/image";
 import checkmail from "../../public/open_mail.png";
 import Button from "../../Components/Button/Button";
+import BackRouter from "../../Components/BackRouter/BackRouter";
 
 const OpenMail = () => {
    return (
       <Layout>
+         <BackRouter route={"/Authmode/ResetPassword"}/>
          <div className={styles.desktop}>
             Please visit this page on a mobile device
          </div>

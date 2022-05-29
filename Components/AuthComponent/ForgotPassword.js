@@ -3,6 +3,7 @@ import styles from "./signin.module.scss";
 import Layout from "../Layout/layout";
 import router from "next/router";
 import Button from "../Button/Button";
+import BackRouter from "../BackRouter/BackRouter";
 
 const ForgotPassword = () => {
    const [email, setEmail] = useState("");
@@ -32,6 +33,7 @@ const ForgotPassword = () => {
 
    return (
       <Layout>
+         <BackRouter route={"/Authmode"} />
          <div className={styles.desktop}>
             Please visit this page on a mobile device
          </div>
@@ -43,7 +45,7 @@ const ForgotPassword = () => {
                </div>
                <p className={styles.body_regular} style={{ color: "#98A2B3" }}>
                   Enter your email associated with your TheNew account and
-                  we&#39;ll send you an instructions to reset your password. 
+                  we&#39;ll send you an instructions to reset your password.
                </p>
             </div>
          </div>
