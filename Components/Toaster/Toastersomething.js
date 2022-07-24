@@ -1,18 +1,11 @@
-import { Toaster, resolveValue } from 'react-hot-toast';
+import toast, { Toaster, resolveValue } from 'react-hot-toast';
 
-function Toastersomething({t}) {
-    return (
-<Toaster>
-  {(t) => (
-    <div
-      style={{  background: 'red', padding: 8 }}
-    >
-      {resolveValue(t.message, t)}
-    </div>
-  )}
-</Toaster>
-    )
-    
+export const notify = (message, type) => {
+  const errStyle =  {backgroundColor: 'white', color: 'red'}
+  toast(message, {
+    duration: 4000,
+    position: 'top-center',
+    style: type === 'err' ? errStyle : {backgroundColor: 'white', color: 'black'},
+  })
 }
 
-export default Toastersomething

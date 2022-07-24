@@ -7,8 +7,7 @@ import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 import axios from "axios";
 import toast ,{ Toaster, resolveValue } from 'react-hot-toast';
-
-import Toastersomething from "../Toaster/Toastersomething";
+import {notify} from "../Toaster/Toastersomething";
 
 function Signup({ changeSignIn }) {
    const [passwordShown, setPasswordShown] = useState(false);
@@ -20,12 +19,6 @@ function Signup({ changeSignIn }) {
    const [email, setEmail] = useState("");
    const [password, setPassword] = useState("");
 
-   const notify = () => {
-      toast('Hello World', {
-        duration: 4000,
-        position: 'top-right',
-      });
-    }
 
    const handleSubmit = async (e) => {
       e.preventDefault();
@@ -33,9 +26,10 @@ function Signup({ changeSignIn }) {
          firstName,lastName,email,phoneNumber,password
       })
       .then(data => console.log(data))
-      .catch(err =>  notify())
-
-   // console.log(err.response.data)
+         .catch(err => {
+            const message = 'user with email timtop99@gmail.com already exists'
+            notify(`${err.response.data === message ? 'User already exists.' : 'Error signing in, please try again.'}`, 'err')
+         })
       
    }
 
