@@ -6,6 +6,9 @@ import styles from "./signup.module.scss";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 import axios from "axios";
+import toast ,{ Toaster, resolveValue } from 'react-hot-toast';
+
+import Toastersomething from "../Toaster/Toastersomething";
 
 function Signup({ changeSignIn }) {
    const [passwordShown, setPasswordShown] = useState(false);
@@ -17,13 +20,23 @@ function Signup({ changeSignIn }) {
    const [email, setEmail] = useState("");
    const [password, setPassword] = useState("");
 
+   const notify = () => {
+      toast('Hello World', {
+        duration: 4000,
+        position: 'top-right',
+      });
+    }
+
    const handleSubmit = async (e) => {
       e.preventDefault();
       await axios.post('https://project-z-api.herokuapp.com/signup', {
          firstName,lastName,email,phoneNumber,password
       })
       .then(data => console.log(data))
-      .catch(err=> console.log(err))
+      .catch(err =>  notify())
+
+   // console.log(err.response.data)
+      
    }
 
 // function handleSubmit(e) {
@@ -62,6 +75,8 @@ function Signup({ changeSignIn }) {
          {/* Show this on a mobile view */}
          {/* The header on top of the form */}
          <div className={`${styles.mobile}`}>
+
+         <Toaster />
             <div>
                <div className={styles.h1_medium} style={{ color: "#344054" }}>
                   Sign up{" "}
