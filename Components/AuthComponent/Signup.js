@@ -6,6 +6,7 @@ import styles from "./signup.module.scss";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 import axios from "axios";
+import {notify} from "../Toaster/Toast";
 
 function Signup({ changeSignIn }) {
    const [passwordShown, setPasswordShown] = useState(false);
@@ -17,13 +18,18 @@ function Signup({ changeSignIn }) {
    const [email, setEmail] = useState("");
    const [password, setPassword] = useState("");
 
+
    const handleSubmit = async (e) => {
       e.preventDefault();
       await axios.post('https://project-z-api.herokuapp.com/signup', {
          firstName,lastName,email,phoneNumber,password
       })
       .then(data => console.log(data))
-      .catch(err=> console.log(err))
+         .catch(err => {
+            const message = 'user with email timtop99@gmail.com already exists'
+            notify(`${err.response.data === message ? 'User already exists.' : 'Error signing in, please try again.'}`, 'err')
+         })
+      
    }
 
 // function handleSubmit(e) {
@@ -62,6 +68,7 @@ function Signup({ changeSignIn }) {
          {/* Show this on a mobile view */}
          {/* The header on top of the form */}
          <div className={`${styles.mobile}`}>
+
             <div>
                <div className={styles.h1_medium} style={{ color: "#344054" }}>
                   Sign up{" "}
