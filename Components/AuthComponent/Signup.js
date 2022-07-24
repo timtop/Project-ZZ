@@ -6,8 +6,7 @@ import styles from "./signup.module.scss";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 import axios from "axios";
-import toast ,{ Toaster, resolveValue } from 'react-hot-toast';
-import {notify} from "../Toaster/Toastersomething";
+import {notify} from "../Toaster/Toast";
 
 function Signup({ changeSignIn }) {
    const [passwordShown, setPasswordShown] = useState(false);
@@ -70,7 +69,6 @@ function Signup({ changeSignIn }) {
          {/* The header on top of the form */}
          <div className={`${styles.mobile}`}>
 
-         <Toaster />
             <div>
                <div className={styles.h1_medium} style={{ color: "#344054" }}>
                   Sign up{" "}

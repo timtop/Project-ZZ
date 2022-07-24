@@ -1,4 +1,4 @@
-import toast, { Toaster, resolveValue } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 
 export const notify = (message, type) => {
   const errStyle =  {backgroundColor: 'white', color: 'red'}

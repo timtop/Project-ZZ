@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Toaster} from 'react-hot-toast';
 import Signin from "../../Components/AuthComponent/Signin";
 import Signup from "../../Components/AuthComponent/Signup";
 
@@ -9,13 +10,11 @@ function Authmode() {
     setAuthMode(authMode === "signin" ? "signup" : "signin");
   };
 
-  if (authMode === "signin") {
-    return <Signin changeSignIn={changeAuthMode} />;
-  }
-
   return (
     <div>
-      <Signup changeSignIn={changeAuthMode} />
+      <Toaster />
+      {authMode === "signin" ? <Signin changeSignIn={changeAuthMode} />: <Signup changeSignIn={changeAuthMode} /> }
+     
     </div>
   );
 }
