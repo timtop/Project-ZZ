@@ -5,6 +5,7 @@ import Button from "../Button/Button";
 import styles from "./signup.module.scss";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
+import axios from "axios";
 
 function Signup({ changeSignIn }) {
    const [passwordShown, setPasswordShown] = useState(false);
@@ -16,6 +17,22 @@ function Signup({ changeSignIn }) {
    const [email, setEmail] = useState("");
    const [password, setPassword] = useState("");
 
+   const handleSubmit = async (e) => {
+      e.preventDefault();
+      await axios.post('https://project-z-api.herokuapp.com/signup', {
+         firstName,lastName,email,phoneNumber,password
+      })
+      .then(data => console.log(data))
+      .catch(err=> console.log(err))
+   }
+
+// function handleSubmit(e) {
+//    e.preventDefault();
+//    const signUpDetails = {
+//       firstName,lastName,email,password
+//    };
+//    console.log(signUpDetails);
+// }
    useEffect(() => {
       const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
@@ -55,7 +72,7 @@ function Signup({ changeSignIn }) {
             </div>
 
             {/* The form starts here */}
-            <form className={`${styles.signInForm} `}>
+            <form onSubmit={handleSubmit} className={`${styles.signInForm} `}>
                <label htmlFor="firstName">
                   <input
                      id="firstName"
@@ -153,12 +170,12 @@ function Signup({ changeSignIn }) {
                   </span>
                </label>
 
-               <p>
+               {/* <p>
                   Forgot password?{" "}
                   <span className={styles.undbtn}>Click here</span>
-               </p>
+               </p> */}
 
-               <Button type="submit" isDisabled={btnDisabled}>
+               <Button type="submit" isDisabled={btnDisabled} >
                   Sign up
                </Button>
             </form>

@@ -5,6 +5,7 @@ import Layout from "../Layout/layout";
 import Image from "next/image";
 import Button from "../Button/Button";
 import Link from "next/link";
+import axios from "axios";
 
 function Signin({ changeSignIn }) {
    const [passwordShown, setPasswordShown] = useState(false);
@@ -36,14 +37,18 @@ function Signin({ changeSignIn }) {
       setPasswordText(e.target.value);
    };
 
-   const handleSubmit = (e) => {
+   const handleSubmit = async (e) => {
       e.preventDefault();
+      await axios.post('https://project-z-api.herokuapp.com/check-in', {
+         text,passwordText})
+      .then(data => console.log(data))
+      .catch(err=> console.log(err))
 
-      const loginDetails = {
-         text,
-         passwordText,
-      };
-      console.log(loginDetails);
+      // const loginDetails = {
+      //    text,
+      //    passwordText,
+      // };
+      // console.log(loginDetails);
    };
 
    return (
