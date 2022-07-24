@@ -11,8 +11,8 @@ const BackRouter = ({ route }) => {
             <Image
                src="/back.png"
                alt="toggle show password"
-               width={24}
-               height={24}
+               width={24.1}
+               height={24.1}
             />
          </Link>
       </div>
