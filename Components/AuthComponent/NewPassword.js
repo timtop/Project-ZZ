@@ -3,6 +3,7 @@ import styles from "./signin.module.scss";
 import Layout from "../Layout/layout";
 import router from "next/router";
 import Button from "../Button/Button";
+import BackRouter from "../BackRouter/BackRouter";
 
 const NewPassword = () => {
   const [btnDisabled, setBtnDisabled] = useState(true);
@@ -30,6 +31,7 @@ const NewPassword = () => {
 
   return (
     <Layout>
+      <BackRouter route={"/Authmode/ResetPassword"} />
       <div className={styles.desktop}>
         Please visit this page on a mobile device
       </div>

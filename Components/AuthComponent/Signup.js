@@ -6,6 +6,7 @@ import styles from "./signup.module.scss";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 import axios from "axios";
+import BackRouter from "../BackRouter/BackRouter";
 
 function Signup({ changeSignIn }) {
    const [passwordShown, setPasswordShown] = useState(false);
@@ -62,6 +63,7 @@ function Signup({ changeSignIn }) {
          {/* Show this on a mobile view */}
          {/* The header on top of the form */}
          <div className={`${styles.mobile}`}>
+         <BackRouter route={"/"}/>
             <div>
                <div className={styles.h1_medium} style={{ color: "#344054" }}>
                   Sign up{" "}
