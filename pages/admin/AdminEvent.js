@@ -2,7 +2,6 @@ import React, { useState, useRef } from "react";
 // import AdminNav from "../../Components/AdminNav/AdminNav";
 import Image from "next/image";
 import Link from "next/link";
-
 import styles from "../../styles/adminevent.module.scss";
 import Layout from "../../Components/Layout/layout";
 import TabNavItem from "../../Components/Tabs/TabNavItem";
@@ -21,6 +20,27 @@ function AdminEvent() {
     console.log("Nav closed");
     navRef.current.style.width = "0";
   };
+
+  const currentEvent = [
+    {
+      name: "The Voice",
+      minister: "Pst. Shola Okodugha",
+      time: "6:30PM",
+      date: "Tue, 21 Aug 2022",
+    },
+    {
+      name: "The Spirit",
+      minister: "Pst. Shola Okodugha",
+      time: "6:30PM",
+      date: "Tue, 21 Aug 2022",
+    },
+    {
+      name: "The Body",
+      minister: "Pst. Shola Okodugha",
+      time: "6:30PM",
+      date: "Tue, 21 Aug 2022",
+    },
+  ];
 
   return (
     <div>
@@ -88,139 +108,42 @@ function AdminEvent() {
         <Layout>
           {/* Current */}
           <TabContent id="tab1" activeTab={activeTab}>
-            <div className={styles.card}>
-              <p className={styles.h4_bold} style={{ color: "#344054" }}>
-                Gethsemane: The Voice
-              </p>
-              <p>
-                <span
-                  className={styles.body_regular}
-                  style={{ color: "#98A2B3" }}
-                >
-                  Ministeration by:
-                </span>
-                <span
-                  className={styles.body_regular}
-                  style={{ color: "#344054" }}
-                >
-                  {" "}
-                  Pastor Shola Okodugha
-                </span>
-              </p>
-              <p className={styles.body_medium} style={{ color: "#475467" }}>
-                Tue, 21 Aug 2022
-              </p>
-              <p className={styles.body_regular} style={{ color: "#475467" }}>
-                6:30 PM
-              </p>
-            </div>
-
-            <div className={styles.card}>
-              <p className={styles.h4_bold} style={{ color: "#344054" }}>
-                Gethsemane: The Voice
-              </p>
-              <p>
-                <span
-                  className={styles.body_regular}
-                  style={{ color: "#98A2B3" }}
-                >
-                  Ministeration by:
-                </span>
-                <span
-                  className={styles.body_regular}
-                  style={{ color: "#344054" }}
-                >
-                  {" "}
-                  Pastor Shola Okodugha
-                </span>
-              </p>
-              <p className={styles.body_medium} style={{ color: "#475467" }}>
-                Tue, 21 Aug 2022
-              </p>
-              <p className={styles.body_regular} style={{ color: "#475467" }}>
-                6:30 PM
-              </p>
-            </div>
-
-            <div className={styles.card}>
-              <p className={styles.h4_bold} style={{ color: "#344054" }}>
-                Gethsemane: The Voice
-              </p>
-              <p>
-                <span
-                  className={styles.body_regular}
-                  style={{ color: "#98A2B3" }}
-                >
-                  Ministeration by:
-                </span>
-                <span
-                  className={styles.body_regular}
-                  style={{ color: "#344054" }}
-                >
-                  {" "}
-                  Pastor Shola Okodugha
-                </span>
-              </p>
-              <p className={styles.body_medium} style={{ color: "#475467" }}>
-                Tue, 21 Aug 2022
-              </p>
-              <p className={styles.body_regular} style={{ color: "#475467" }}>
-                6:30 PM
-              </p>
-            </div>
-
-            <div className={styles.card}>
-              <p className={styles.h4_bold} style={{ color: "#344054" }}>
-                Gethsemane: The Voice
-              </p>
-              <p>
-                <span
-                  className={styles.body_regular}
-                  style={{ color: "#98A2B3" }}
-                >
-                  Ministeration by:
-                </span>
-                <span
-                  className={styles.body_regular}
-                  style={{ color: "#344054" }}
-                >
-                  {" "}
-                  Pastor Shola Okodugha
-                </span>
-              </p>
-              <p className={styles.body_medium} style={{ color: "#475467" }}>
-                Tue, 21 Aug 2022
-              </p>
-              <p className={styles.body_regular} style={{ color: "#475467" }}>
-                6:30 PM
-              </p>
-            </div>
-
-            <div className={styles.card}>
-              <p className={styles.h4_bold} style={{ color: "#344054" }}>
-                Gethsemane: The Voice
-              </p>
-              <p>
-                <span
-                  className={styles.body_regular}
-                  style={{ color: "#98A2B3" }}
-                >
-                  Ministeration by:
-                </span>
-                <span
-                  className={styles.body_regular}
-                  style={{ color: "#344054" }}
-                >
-                  {" "}
-                  Pastor Shola Okodugha
-                </span>
-              </p>
-              <p className={styles.body_medium} style={{ color: "#475467" }}>
-                Tue, 21 Aug 2022
-              </p>
-              <p className={styles.body_regular} style={{ color: "#475467" }}>
-                6:30 PM
-              </p>
+            <div>
+              {currentEvent.map((e, index) => {
+                return (
+                  <div key={index} className={styles.card}>
+                    <p className={styles.h4_bold} style={{ color: "#344054" }}>
+                      {e.name}
+                    </p>
+                    <p>
+                      <span
+                        className={styles.body_regular}
+                        style={{ color: "#98A2B3" }}
+                      >
+                        Ministeration by:
+                      </span>
+                      <span
+                        className={styles.body_regular}
+                        style={{ color: "#344054" }}
+                      >
+                        {e.minister}
+                      </span>
+                    </p>
+                    <p
+                      className={styles.body_medium}
+                      style={{ color: "#475467" }}
+                    >
+                      {e.date}
+                    </p>
+                    <p
+                      className={styles.body_regular}
+                      style={{ color: "#475467" }}
+                    >
+                      {e.time}
+                    </p>
+                  </div>
+                );
+              })}
             </div>
           </TabContent>
 

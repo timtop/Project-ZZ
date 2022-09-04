@@ -3,6 +3,8 @@ import Image from "next/image";
 import styles from "../../styles/createevent.module.scss";
 import Layout from "../../Components/Layout/layout";
 import Button from "../../Components/Button/Button";
+import axios from "axios";
+import { useRouter } from "next/router";
 
 import Link from "next/link";
 
@@ -17,6 +19,7 @@ function CreateEvent() {
   const [Ig, setIg] = useState("");
   const [youTube, setYouTube] = useState("");
   const [mixlr, setMixlr] = useState("");
+  const router = useRouter();
 
   useEffect(() => {
     if (
@@ -55,7 +58,7 @@ function CreateEvent() {
   };
 
   // Handle Submit
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const formValues = {
@@ -69,6 +72,18 @@ function CreateEvent() {
       mixlr,
     };
     console.log(formValues);
+
+    await axios
+      .post(
+        "https://project-z-api.herokuapp.com/admin/create-service",
+        formValues
+      )
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((err) => {
+        console.log(err.response);
+      });
   };
 
   // console.log(eventImage);

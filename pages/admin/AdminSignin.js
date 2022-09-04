@@ -6,10 +6,13 @@ import styles from "../../Components/AuthComponent/signin.module.scss";
 import adminstyles from "../../styles/adminsignin.module.scss";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
+import axios from "axios";
+import { useRouter } from "next/router";
 
 function AdminSignin() {
   const [passwordShown, setPasswordShown] = useState(false);
   const [btnDisabled, setBtnDisabled] = useState(true);
+  const router = useRouter();
 
   // Collecting the text
   const [text, setText] = useState("");
@@ -38,7 +41,7 @@ function AdminSignin() {
     setPasswordText(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const loginDetails = {
@@ -46,6 +49,15 @@ function AdminSignin() {
       passwordText,
     };
     console.log(loginDetails);
+
+    await axios
+      .post("https://project-z-api.herokuapp.com/admin/login", loginDetails)
+      .then((data) => {
+        console.log(data);
+        console.log(data.data.auth_token);
+        data.data.auth_token ? router.push("/admin/AdminEvent") : null;
+      })
+      .catch((err) => console.log(err));
   };
 
   return (

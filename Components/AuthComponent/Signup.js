@@ -26,8 +26,9 @@ function Signup({ changeSignIn }) {
       })
       .then(data => console.log(data))
          .catch(err => {
-            const message = 'user with email timtop99@gmail.com already exists'
-            notify(`${err.response.data === message ? 'User already exists.' : 'Error signing in, please try again.'}`, 'err')
+            const message = `user with email ${email} already exists`
+            console.log(err.response)
+            notify(`${err.response.data.err === message ? `User with email ${email} already exist sign in instead.` : 'Error signing in, please try again.'}`, 'err')
          })
       
    }
